@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Veloura Café</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"DM Sans",sans-serif;
+    background:#f8f4ed;
+    color:#29231e;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+
+/* NAVBAR */
+
+.navbar{
+    height:78px;
+    padding:0 5%;
+    background:#fffaf4;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    border-bottom:1px solid #eadfd2;
+}
+
+.logo{
+    font-family:"Playfair Display",serif;
+    font-size:29px;
+    font-weight:700;
+    color:#4d2e20;
+}
+
+.logo span{
+    color:#b97945;
+}
+
+.nav-links{
+    display:flex;
+    gap:32px;
+    list-style:none;
+}
+
+.nav-links a{
+    font-size:14px;
+    font-weight:600;
+}
+
+.nav-links a:hover{
+    color:#b97945;
+}
+
+.nav-button{
+    background:#4d2e20;
+    color:white !important;
+    padding:12px 21px;
+    border-radius:30px;
+}
+
+
+/* HERO */
+
+.hero{
+    min-height:650px;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(36,22,15,.84),
+        rgba(36,22,15,.42),
+        rgba(36,22,15,.10)
+    ),
+    url("https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1800&q=85");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+}
+
+.hero-content{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    color:white;
+}
+
+.hero-content small{
+    color:#e9b982;
+    font-weight:700;
+    letter-spacing:3px;
+    text-transform:uppercase;
+}
+
+.hero-content h1{
+    font-family:"Playfair Display",serif;
+    font-size:70px;
+    line-height:1.05;
+    max-width:650px;
+    margin:20px 0;
+}
+
+.hero-content p{
+    max-width:520px;
+    font-size:17px;
+    color:#f3eee9;
+    margin-bottom:30px;
+}
+
+.buttons{
+    display:flex;
+    gap:15px;
+}
+
+.btn{
+    padding:14px 25px;
+    border-radius:30px;
+    font-size:14px;
+    font-weight:700;
+}
+
+.primary{
+    background:#b97945;
+    color:white;
+}
+
+.secondary{
+    border:1px solid white;
+    color:white;
+}
+
+
+/* WELCOME */
+
+section{
+    padding:90px 0;
+}
+
+.welcome{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.welcome-image{
+    height:500px;
+    overflow:hidden;
+    border-radius:8px;
+}
+
+.welcome-image img{
+    height:100%;
+    object-fit:cover;
+}
+
+.label{
+    color:#b97945;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+h2{
+    font-family:"Playfair Display",serif;
+    font-size:45px;
+    line-height:1.1;
+    margin:12px 0 18px;
+}
+
+.description{
+    color:#756b63;
+    line-height:1.8;
+}
+
+
+/* MENU */
+
+.menu-section{
+    background:#33231b;
+    color:white;
+}
+
+.section-title{
+    text-align:center;
+    max-width:650px;
+    margin:0 auto 45px;
+}
+
+.section-title p{
+    color:#c8bdb4;
+}
+
+.menu-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.menu-card{
+    background:#fffaf4;
+    color:#29231e;
+    border-radius:8px;
+    overflow:hidden;
+}
+
+.menu-image{
+    height:220px;
+}
+
+.menu-image img{
+    height:100%;
+    object-fit:cover;
+}
+
+.menu-content{
+    padding:22px;
+}
+
+.menu-content h3{
+    font-family:"Playfair Display",serif;
+    font-size:24px;
+}
+
+.menu-content p{
+    color:#777;
+    font-size:13px;
+    margin:7px 0 15px;
+}
+
+.price{
+    color:#b16634;
+    font-weight:700;
+    font-size:17px;
+}
+
+
+/* SPECIAL */
+
+.special{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:45px;
+    align-items:center;
+}
+
+.special-image{
+    height:420px;
+}
+
+.special-image img{
+    height:100%;
+    object-fit:cover;
+    border-radius:8px;
+}
+
+.special-content{
+    background:#ead9c7;
+    padding:50px;
+    border-radius:8px;
+}
+
+.special-content h2{
+    color:#4d2e20;
+}
+
+.special-content p{
+    color:#66574d;
+    line-height:1.8;
+}
+
+.offer{
+    display:inline-block;
+    background:#4d2e20;
+    color:white;
+    padding:9px 15px;
+    margin:20px 0;
+    border-radius:30px;
+    font-size:12px;
+    font-weight:700;
+}
+
+
+/* REVIEWS */
+
+.reviews{
+    background:#f0e8df;
+}
+
+.review-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.review{
+    background:white;
+    padding:30px;
+    border-radius:8px;
+}
+
+.stars{
+    color:#c88a4c;
+    letter-spacing:4px;
+}
+
+.review p{
+    color:#6e665f;
+    margin:15px 0;
+    font-size:14px;
+    line-height:1.8;
+}
+
+.customer{
+    font-weight:700;
+}
+
+
+/* HOURS */
+
+.hours{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.hours-image{
+    height:420px;
+}
+
+.hours-image img{
+    height:100%;
+    object-fit:cover;
+    border-radius:8px;
+}
+
+.hours-table{
+    margin-top:25px;
+}
+
+.day{
+    display:flex;
+    justify-content:space-between;
+    padding:14px 0;
+    border-bottom:1px solid #ddd2c8;
+}
+
+
+/* LOCATION */
+
+.location{
+    background:#4d2e20;
+    color:white;
+}
+
+.location-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.location p{
+    color:#d8cec6;
+    line-height:1.8;
+}
+
+.map-box{
+    height:300px;
+    border-radius:8px;
+    overflow:hidden;
+}
+
+.map-box img{
+    height:100%;
+    object-fit:cover;
+}
+
+
+/* FOOTER */
+
+footer{
+    background:#241712;
+    color:white;
+    padding:45px 5% 20px;
+}
+
+.footer-grid{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr;
+    gap:35px;
+}
+
+.footer-brand h2{
+    font-size:30px;
+}
+
+.footer-brand p{
+    color:#a99c94;
+    max-width:350px;
+    margin-top:10px;
+}
+
+.footer-column h4{
+    margin-bottom:15px;
+}
+
+.footer-column a{
+    display:block;
+    color:#a99c94;
+    margin:8px 0;
+    font-size:14px;
+}
+
+.copyright{
+    max-width:1200px;
+    margin:35px auto 0;
+    border-top:1px solid #49372e;
+    padding-top:18px;
+    color:#8f8179;
+    font-size:12px;
+}
+
+
+/* DESKTOP ONLY */
+
+@media(min-width:901px){
+
+    .mobile-note{
+        display:none;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+    <a href="#" class="logo">
+        Veloura<span>.</span>
+    </a>
+
+    <ul class="nav-links">
+
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#special">Specials</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#location">Location</a></li>
+        <li>
+            <a href="#contact" class="nav-button">
+                Reserve a Table
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <small>Artisan Café · Since 2018</small>
+
+        <h1>
+            Your daily dose
+            of something beautiful.
+        </h1>
+
+        <p>
+            Specialty coffee, handcrafted desserts and
+            warm conversations served in a space designed
+            to slow down your day.
+        </p>
+
+        <div class="buttons">
+
+            <a href="#menu" class="btn primary">
+                Explore Menu
+            </a>
+
+            <a href="#location" class="btn secondary">
+                Find Us
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- WELCOME -->
+
+<section>
+
+<div class="container welcome">
+
+    <div class="welcome-image">
+
+        <img
+        src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=85"
+        alt="Coffee">
+
+    </div>
+
+    <div>
+
+        <span class="label">
+            Welcome to Veloura
+        </span>
+
+        <h2>
+            Crafted slowly.
+            Enjoyed completely.
+        </h2>
+
+        <p class="description">
+            We believe great coffee is more than a drink.
+            It is a moment to pause, connect and enjoy.
+            Every cup is prepared using carefully selected
+            beans and thoughtful brewing techniques.
+        </p>
+
+        <br>
+
+        <p class="description">
+            From your morning espresso to an evening dessert,
+            Veloura is made for conversations, creativity
+            and unforgettable little moments.
+        </p>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- MENU -->
+
+<section class="menu-section" id="menu">
+
+<div class="container">
+
+<div class="section-title">
+
+    <span class="label">
+        Our Menu
+    </span>
+
+    <h2>
+        Something for every mood.
+    </h2>
+
+    <p>
+        Freshly prepared favourites, from bold coffee
+        to comforting desserts.
+    </p>
+
+</div>
+
+
+<div class="menu-grid">
+
+
+<div class="menu-card">
+
+    <div class="menu-image">
+
+        <img
+        src="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=1000&q=85">
+
+    </div>
+
+    <div class="menu-content">
+
+        <h3>
+            Signature Latte
+        </h3>
+
+        <p>
+            Smooth espresso with silky steamed milk
+            and our signature house blend.
+        </p>
+
+        <span class="price">
+            ₹220
+        </span>
+
+    </div>
+
+</div>
+
+
+<div class="menu-card">
+
+    <div class="menu-image">
+
+        <img
+        src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1000&q=85">
+
+    </div>
+
+    <div class="menu-content">
+
+        <h3>
+            Artisan Cappuccino
+        </h3>
+
+        <p>
+            Rich espresso, creamy foam and
+            a perfectly balanced finish.
+        </p>
+
+        <span class="price">
+            ₹200
+        </span>
+
+    </div>
+
+</div>
+
+
+<div class="menu-card">
+
+    <div class="menu-image">
+
+        <img
+        src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1000&q=85">
+
+    </div>
+
+    <div class="menu-content">
+
+        <h3>
+            Chocolate Cake
+        </h3>
+
+        <p>
+            Soft chocolate layers finished with
+            rich handmade ganache.
+        </p>
+
+        <span class="price">
+            ₹280
+        </span>
+
+    </div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SPECIAL -->
+
+<section id="special">
+
+<div class="container special">
+
+    <div class="special-image">
+
+        <img
+        src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=1200&q=85">
+
+    </div>
+
+    <div class="special-content">
+
+        <span class="label">
+            Today's Special
+        </span>
+
+        <h2>
+            Honey Cinnamon
+            Cold Brew
+        </h2>
+
+        <p>
+            Slow-brewed coffee, natural honey,
+            cinnamon and a refreshing cold finish.
+            Created for warm afternoons and long conversations.
+        </p>
+
+        <span class="offer">
+            SPECIAL PRICE · ₹249
+        </span>
+
+        <br>
+
+        <a href="#contact" class="btn primary">
+            Order Special
+        </a>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- REVIEWS -->
+
+<section class="reviews" id="reviews">
+
+<div class="container">
+
+<div class="section-title">
+
+    <span class="label">
+        Customer Love
+    </span>
+
+    <h2>
+        What our guests say.
+    </h2>
+
+</div>
+
+
+<div class="review-grid">
+
+<div class="review">
+
+    <div class="stars">
+        ★★★★★
+    </div>
+
+    <p>
+        "Beautiful atmosphere and probably one
+        of the smoothest cappuccinos I've had.
+        Perfect place to work."
+    </p>
+
+    <span class="customer">
+        — Ananya
+    </span>
+
+</div>
+
+
+<div class="review">
+
+    <div class="stars">
+        ★★★★★
+    </div>
+
+    <p>
+        "The desserts are incredible.
+        I came for coffee and stayed for
+        two hours. Absolutely loved it."
+    </p>
+
+    <span class="customer">
+        — Rohan
+    </span>
+
+</div>
+
+
+<div class="review">
+
+    <div class="stars">
+        ★★★★★
+    </div>
+
+    <p>
+        "Warm staff, great music and amazing
+        coffee. Veloura has become my favourite
+        weekend café."
+    </p>
+
+    <span class="customer">
+        — Meera
+    </span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- HOURS -->
+
+<section>
+
+<div class="container hours">
+
+    <div class="hours-image">
+
+        <img
+        src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200&q=85">
+
+    </div>
+
+    <div>
+
+        <span class="label">
+            Visit Us
+        </span>
+
+        <h2>
+            Take a seat.
+            Stay awhile.
+        </h2>
+
+        <p class="description">
+            Find your favourite corner, order something
+            delicious and make yourself comfortable.
+        </p>
+
+        <div class="hours-table">
+
+            <div class="day">
+                <span>Monday – Friday</span>
+                <strong>8:00 AM – 10:00 PM</strong>
+            </div>
+
+            <div class="day">
+                <span>Saturday</span>
+                <strong>8:00 AM – 11:00 PM</strong>
+            </div>
+
+            <div class="day">
+                <span>Sunday</span>
+                <strong>9:00 AM – 10:00 PM</strong>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- LOCATION -->
+
+<section class="location" id="location">
+
+<div class="container location-grid">
+
+    <div>
+
+        <span class="label">
+            Find Veloura
+        </span>
+
+        <h2>
+            Come say hello.
+        </h2>
+
+        <p>
+            18 Riverside Avenue,<br>
+            Jubilee Hills,<br>
+            Hyderabad, Telangana
+        </p>
+
+        <br>
+
+        <p>
+            📞 +91 98765 43210<br>
+            ✉ hello@veloura.com
+        </p>
+
+    </div>
+
+
+    <div class="map-box">
+
+        <img
+        src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1200&q=85">
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer id="contact">
+
+<div class="footer-grid">
+
+    <div class="footer-brand">
+
+        <h2>
+            Veloura.
+        </h2>
+
+        <p>
+            Specialty coffee, beautiful spaces
+            and moments worth remembering.
+        </p>
+
+    </div>
+
+
+    <div class="footer-column">
+
+        <h4>Explore</h4>
+
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#special">Specials</a>
+        <a href="#reviews">Reviews</a>
+
+    </div>
+
+
+    <div class="footer-column">
+
+        <h4>Visit</h4>
+
+        <a href="#">Location</a>
+        <a href="#">Opening Hours</a>
+        <a href="#">Reservations</a>
+
+    </div>
+
+
+    <div class="footer-column">
+
+        <h4>Follow</h4>
+
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">Email</a>
+
+    </div>
+
+</div>
+
+
+<div class="copyright">
+
+    © 2026 Veloura Café. All rights reserved.
+
+</div>
+
+</footer>
+
+</body>
+</html>
